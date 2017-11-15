@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="toujoursApp">
 
 <head>
     <title></title>
@@ -14,10 +14,22 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="toujoursAppCtrl.js"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    <div ng-controller="toujoursAppCtrl">
+        X:
+        <input type="number" ng-model="x"><br><br>
+        Y:
+        <input type="number" ng-model="y"><br>
+       <p>Sum: {{sum()}}</p>
+       <p>Minus: {{minus()}}</p>
+       <p>Total: {{total()}}</p>
+       <p>Divide: {{divide() | number :2}}</p>
+     
 
 </body>
 
