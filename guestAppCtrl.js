@@ -1,12 +1,12 @@
 gapp.controller("guestAppCtrl", function ($scope) {
-    function Guest(gfname, glname, gcity, gstreet, gemail,gpassword, city, gtel) {
+    function Guest(gfname, glname, gcity, gstreet, gemail,gpassword, acode, gtel) {
         this.gfname = gfname;
         this.glname = glname;
         this.gcity = gcity;
         this.gstreet = gstreet;
         this.gmail = gmail;
         this.gpassword = gpassword;
-        this.city = city;
+        this.acode = acode;
         this.gtel = gtel;
     }
      $scope.guests = [new Guest("Dora", "Hajdu", "Kfar Sava", "Hameyasdim 21", "dudorka@hotmail.com","Dorika", "52", "5239029"),
@@ -18,7 +18,12 @@ gapp.controller("guestAppCtrl", function ($scope) {
     $scope.sortBy = function (prop) {
         $scope.orderProp = prop;
     }
-
+    
 
 
 });
+gapp.controller('guestAppCtrl', function($scope, $http) {
+    $http.get("welcome.htm").then(function (response) {
+        $scope.myWelcome = response.data;
+    });
+  });

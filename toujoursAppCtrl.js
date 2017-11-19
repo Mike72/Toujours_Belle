@@ -1,12 +1,12 @@
 app.controller("toujoursAppCtrl", function ($scope) {
-    function Guest(gfname, glname,gcity,gstreet, gmail,gpassword,city, gtel) {
+    function Guest(gfname, glname,gcity,gstreet, gmail,gpassword,acode, gtel) {
         this.gfname = gfname;
         this.glname = glname;
         this.gcity = gcity;
         this.gstreet = gstreet;
         this.gmail = gmail;
         this.gpassword = gpassword;
-        this.city = city;
+        this.acode = acode;
         this.gtel = gtel;
     }
 
