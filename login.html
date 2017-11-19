@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="guestApp">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="gapp.js"></script>
+    <script src="guestAppCtrl.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <div class="container">
+
+        <div class="jumbotron">
+            <div class="container header">
+                <h1>Toujours Belle</h1>
+                <h2>We Know What Is Best For Your Nail</h2>
+            </div>
+        </div>
+
+
+        <h1>Login</h1>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember"> Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-user" data-target="#myModal"></span>Register</a>
+                            </button>
+                            <button type="button" class="btn btn-lg" data-toggle="" data-target="">
+                                <a href="guest.html">
+                                    <span class="glyphicon glyphicon-user" data-target=""></span>Login</a>
+                            </button>
+                            <button type="button" class="btn btn-lg" data-toggle="" data-target="">
+                                <a href="login.html">
+                                    <span class="glyphicon glyphicon-user" data-target=""></span>Reset</a>
+                            </button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <form class="form-horizontal" action="/action_page.php">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="gfname">First Name:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="" placeholder="Enter First Name" name="gfname">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="glname">Last Name:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="" placeholder="Enter Last Name" name="glname">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label class="control-label col-sm-2" for="email">Email:</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-user"></i>
+                                                        </span>
+                                                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="pwd">Password:</label>
+
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-lock"></i>
+                                                        </span>
+                                                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="city">City:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="city" placeholder="City" name="city">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="street">Street :</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="gstreet" placeholder="Street and number" name="street">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="phn">Phone:</label>
+
+                                                <div class="col-sm-10">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-phone"></i>
+                                                        </span>
+                                                        <div class="input-group">
+                                                            <select name="acode" class="form-control" id="acode">
+                                                                <option>Please Select</option>
+                                                                <option>050</option>
+                                                                <option>052</option>
+                                                                <option>054</option>
+                                                                <option>055</option>
+                                                                <option>058</option>
+                                                            </select>
+                                                        </div>
+                                                        <input type="tel" class="form-control" id="phn" placeholder="Enter Your Phone Number" name="phn">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="remember"> Remember me</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-default" ng-click="addGuest()">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
