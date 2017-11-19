@@ -16,20 +16,72 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="toujoursAppCtrl.js"></script>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div ng-controller="toujoursAppCtrl">
-        X:
-        <input type="number" ng-model="x"><br><br>
-        Y:
-        <input type="number" ng-model="y"><br>
-       <p>Sum: {{sum()}}</p>
-       <p>Minus: {{minus()}}</p>
-       <p>Total: {{total()}}</p>
-       <p>Divide: {{divide() | number :2}}</p>
-     
+    <div class="container" ng-controller="toujoursAppCtrl">
+        <h1 style="text-align: center; margin-bottom: 2em;">Our Guests</h1>
+        <div style="margin: 2em;">
+            Search:
+            <input type="search" ng-model="query.fname" /> Order By:
+            <select ng-model="orderProp">
+                <option value="fname">First Name</option>
+                <option value="lname">Last Name</option>
+            </select>
+        </div>
+        <div class="row">
+
+            <div style="margin-bottom: 1em; display: block;" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <table class="table ">
+                    <tr>
+                        <th ng-click="sortBy( 'index') ">Number</th>
+                        <th ng-click="sortBy( 'gfname') ">First Name</th>
+                        <th ng-click="sortBy( 'glname') ">Last Name</th>
+                        <th ng-click="sortBy( 'gemail') ">Email</th>
+                        <th ng-click="sortBy( 'gpassword') ">Password</th>
+                        <th ng-click="sortBy( 'city') ">City</th>
+                        <th ng-click="sortBy( 'gstreet') ">Street</th>
+                        <th ng-click="sortBy( 'area','gtel') ">Telephone</th>
+                        
+                    </tr>
+
+
+                    <tr ng-repeat="guest in guests | filter : query | orderBy : orderProp">
+
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{guest.gfname}}</td>
+                        <td>{{guest.glname}}</td>
+                        <td>{{guest.gmail}}</td>
+                        <td>{{guest.gpassword}}</td>
+                        <td>{{guest.city}}</td>
+                        <td>{{guest.gstreet}}</td>
+                        <td>{{"+972/ " + guest.area + " - " + guest.gtel}}</td>
+
+                    </tr>
+                </table>
+
+
+            </div>
+            <button type="button" class="btn btn-default" ng-click="addGuest()">Add Guest</button>
+
+        </div>
+        <!--  <div>
+            <table>
+                <tr ng-repeat="treatment in treatments">
+                    <td>{{ $index + 1 }}</td>
+                    <td><p>"Manicure: "{{treatment.manicure + treatment.maniPrice | }}</td>
+                    <td>{{guest.glname}}</td>
+                    <td>
+                        <a href="{{guest.gemail}}"></a>
+                    </td>
+                    <td>{{"+972/ " + guest.area + " - " + guest.gtel}}</td>
+
+                </tr>
+            </table>
+        </div>-->
+    </div>
+
 
 </body>
 
