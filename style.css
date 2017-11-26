@@ -11,6 +11,7 @@ table, th , td  {
   }
   .header, #toujours{
     font-family: 'Cookie', cursive;
+   
 }
 h3{
     font-family: 'Pacifico', cursive;
@@ -20,4 +21,7 @@ h3{
 }
 #contact{
   width: 100%;
+}
+body{
+  background-image: url(pictures\ToujoursBelle.JPG);
 }

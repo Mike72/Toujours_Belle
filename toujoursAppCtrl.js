@@ -20,5 +20,9 @@ app.controller("toujoursAppCtrl", function ($scope) {
     $scope.sortBy = function (prop) {
         $scope.orderProp = prop;
     }
+	/*$scope.addNewGuest = function (){
+		$scope.guests.push(new Guest({{guest.gfname}},{{guest.glname}},{{guest.gcity}},{{guest.gsteet}},{{guest.gmail}},{{guest.gpassword}}
+		,{{guest.acode}},{{guest.gtel}}));
+	}*/
    
 });
